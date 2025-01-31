@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #90d5ff 0%, #65b6ff 100%);
+    padding: 20px;
+}
+
+.cal-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.cal-header {
+    background: linear-gradient(135deg, #ff4d4d 0%, #ff0000 100%);
+    padding: 20px;
+    text-align: center;
+}
+
+.cal-header h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cal-body {
+    padding: 24px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    margin-bottom: 20px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #90d5ff;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.radio-group label {
+    margin: 0;
+    cursor: pointer;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.action-btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#convert {
+    background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+    color: white;
+}
+
+#clear {
+    background: linear-gradient(135deg, #f87171 0%, #dc2626 100%);
+    color: white;
+}
+
+.cal-footer {
+    background: #f8f9fa;
+    padding: 20px 24px;
+    border-top: 2px solid #eee;
+}
+
+.cal-footer input {
+    background: white;
+    font-weight: 500;
+    color: #333;
+}
+
+@media (max-width: 480px) {
+    .cal-container {
+        border-radius: 12px;
+    }
+
+    .cal-header {
+        padding: 16px;
+    }
+
+    .cal-body {
+        padding: 16px;
+    }
+
+    .cal-footer {
+        padding: 16px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
